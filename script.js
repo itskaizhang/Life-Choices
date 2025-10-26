@@ -3,7 +3,7 @@ let img;
 let button1, button2, button3;
 
 function preload() {
-  img = loadImage('https://www.google.com/imgres?q=hungry&imgurl=https%3A%2F%2Fimages.medicinenet.com%2Fimages%2Farticle%2Fmain_image%2Fman-hungry-angery-plate-utensils-eating-diet-nutrition.jpg%3Foutput-quality%3D75&imgrefurl=https%3A%2F%2Fwww.medicinenet.com%2Fwhy_do_i_constantly_feel_hungry_even_after_eating%2Farticle.htm&docid=58xg53_In2JmgM&tbnid=7RWU8-WkwVVcFM&vet=12ahUKEwi-mqyR3buQAxX8D1kFHWE1DiMQM3oECBIQAA..i&w=650&h=442&hcb=2&ved=2ahUKEwi-mqyR3buQAxX8D1kFHWE1DiMQM3oECBIQAA');
+  img = loadImage('https://images.medicinenet.com/images/article/main_image/man-hungry-angery-plate-utensils-eating-diet-nutrition.jpg');
 }
 
 function setup() {
@@ -19,7 +19,7 @@ function setup() {
 
   button1.position(windowWidth / 2 - 150, windowHeight / 2 - 100);
   button2.position(windowWidth / 2 + 50, windowHeight / 2 - 100);
-  button3.position(windowWidth / 2, windowHeight / 2 - 200)
+  button3.position(windowWidth / 2, windowHeight / 2 - 300)
 
  
   button1.mousePressed(() => {
@@ -33,7 +33,22 @@ function setup() {
   button3.mousePressed(() => {
     currentPage = "page3";
   });
+
+  tacoButton = createButton('Chipotle');
+  burritoButton = createButton('Tomatillo');
+  nachosButton = createButton('Vivaz Cantina');
+
+  tacoButton.position(windowWidth / 2 - 100, windowHeight / 2);
+  burritoButton.position(windowWidth / 2, windowHeight / 2);
+  nachosButton.position(windowWidth / 2 + 100, windowHeight / 2);
+
+  tacoButton.hide();
+  burritoButton.hide();
+  nachosButton.hide();
+
+
 }
+
 
 function draw() {
   background(220);
@@ -43,10 +58,24 @@ function draw() {
   } else if (currentPage === "page1") {
     showPage("You are on Page 1. Something happens here.");
   } else if (currentPage === "page2") {
-    showPage("You are on Page 2. Something else happens.");
+    showPage2();
  } else if (currentPage === "page3") {
     showPage("YOu are on Page 3. Something else happens.");
  }
+}
+function showPage2() {
+  button1.hide();
+  button2.hide();
+  button3.hide();
+
+  tacoButton.show();
+  burritoButton.show();
+  nachosButton.show();
+
+  background(255, 240, 200);
+  img = loadImage ('https://domesticfits.com/wp-content/uploads/2024/05/mexican-cuisine-more-than-640x427.jpeg');
+  fill(0);
+  text("Where do you want to get Mexican food from?", width / 2, height / 2 - 100);
 }
 
 function showStartPage() {
@@ -57,11 +86,13 @@ function showStartPage() {
 
   button1.show();
   button2.show();
+  button3.show();
 }
 
 function showPage(message) {
   button1.hide();
   button2.hide();
+  button3.hide();
 
   background(200);
   fill(0);

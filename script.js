@@ -19,7 +19,7 @@ function setup() {
 
   button1.position(windowWidth / 2 - 150, windowHeight / 2 - 100);
   button2.position(windowWidth / 2 + 50, windowHeight / 2 - 100);
-  button3.position(windowWidth / 2, windowHeight / 2 - 300)
+  button3.position(windowWidth / 2, windowHeight / 2 - 50)
 
  
   button1.mousePressed(() => {
@@ -65,11 +65,11 @@ function draw() {
  } else if (currentPage === "page3") {
     showPage("YOu are on Page 3. Something else happens.");
  }else if (currentPage === "tacoPage") {
-    showFoodPage("Uh oh! Chipotle is closed due to RATS!! Guess you're going to bed hungry :(");
+    showFoodPage1("Uh oh! Chipotle is closed due to RATS!! Guess you're going to bed hungry :(");
   } else if (currentPage === "burritoPage") {
-    showFoodPage("Great choice, local establishment and great for grabbing a good bite on the go!");
+    showFoodPage2("Great choice, local establishment and great for grabbing a good bite on the go!");
   } else if (currentPage === "nachoPage") {
-    showFoodPage("A great spot for food or drinks (as long as you're over 21) have a seat and grab a meal.");
+    showFoodPage3("A great spot for food or drinks (as long as you're over 21) have a seat and grab a meal.");
   }
 }
 function showPage2() {
@@ -107,4 +107,49 @@ function showPage(message) {
   fill(0);
   text(message, width / 2, height / 2);
 }
+function showFoodPage1(title, description) {
+  tacoButton.hide();
+  burritoButton.hide();
+  nachosButton.hide();
+  button1.hide();
+  button2.hide();
+  button3.hide();
+  img = loadImage ('https://nationalzoo.si.edu/sites/default/files/animals/norwayrat-001-reverse.jpg')
+  background(250, 230, 180);
+  fill(0);
+  textSize(28);
+  text(title, width / 2, height / 2 - 60);
+  textSize(18);
+  text(description, width / 2, height / 2);
+}
 
+function showFoodPage2(title, description) {
+  tacoButton.hide();
+  burritoButton.hide();
+  nachosButton.hide();
+  button1.hide();
+  button2.hide();
+  button3.hide();
+  img = loadImage ('https://s3-media0.fl.yelpcdn.com/bphoto/P2UmzAQe-uCw0Byoq0czYA/348s.jpg')
+  background(250, 230, 180);
+  fill(0);
+  textSize(28);
+  text(title, width / 2, height / 2 - 60);
+  textSize(18);
+  text(description, width / 2, height / 2);
+}
+function showFoodPage3(title, description) {
+  tacoButton.hide();
+  burritoButton.hide();
+  nachosButton.hide();
+  button1.hide();
+  button2.hide();
+  button3.hide();
+  img = loadImage ('https://lh3.googleusercontent.com/p/AF1QipO9H_3UTU83GziD_WFVLfdm4y6YZzh054Hhildt=w289-h312-n-k-no')
+  background(250, 230, 180);
+  fill(0);
+  textSize(28);
+  text(title, width / 2, height / 2 - 60);
+  textSize(18);
+  text(description, width / 2, height / 2);
+}

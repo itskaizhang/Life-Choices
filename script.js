@@ -14,7 +14,7 @@ function setup() {
  
   button1 = createButton('Chinese Food');
   button2 = createButton('Mexican Food');
-  button3 = createButton('Fast Food');
+  button3 = createButton('Indian Food');
 
 
   button1.position(windowWidth / 2 - 150, windowHeight / 2 - 100);

@@ -46,6 +46,9 @@ function setup() {
   burritoButton.hide();
   nachosButton.hide();
 
+  tacoButton.mousePressed(() => currentPage = "tacoPage");
+  burritoButton.mousePressed(() => currentPage = "burritoPage");
+  nachosButton.mousePressed(() => currentPage = "nachoPage");
 
 }
 
@@ -61,7 +64,13 @@ function draw() {
     showPage2();
  } else if (currentPage === "page3") {
     showPage("YOu are on Page 3. Something else happens.");
- }
+ }else if (currentPage === "tacoPage") {
+    showFoodPage("Uh oh! Chipotle is closed due to RATS!! Guess you're going to bed hungry :(");
+  } else if (currentPage === "burritoPage") {
+    showFoodPage("Great choice, local establishment and great for grabbing a good bite on the go!");
+  } else if (currentPage === "nachoPage") {
+    showFoodPage("A great spot for food or drinks (as long as you're over 21) have a seat and grab a meal.");
+  }
 }
 function showPage2() {
   button1.hide();

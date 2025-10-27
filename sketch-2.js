@@ -153,7 +153,7 @@ function draw() {
             text('That seagull was a mother trying to feed its kids. \nYou just shooed a poor single mother away.\n How do you feel?', width/2, height/2);
         }   else if (mexicanChoice === "split") {
             textSize(30)
-            text('That seagull was a mother trying to feed its kid. \nNow she can go home early to look after her kids.', width/2, height/2);
+            text('That seagull was a mother trying to feed its kids. \nNow she can go home early to look after her kids.', width/2, height/2);
         } 
     }
 }

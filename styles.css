@@ -44,6 +44,12 @@ body {
     margin-top: 3%;
 }
 
+.lunch-choices button.active {
+    background-color: #ffcc66; /* highlight color */
+    border-color: #e6a400;
+    font-size: 4em;
+  }
+
 button {
     padding: 1.25%;
 }

@@ -93,16 +93,6 @@ scene2_C_J_Buttons.forEach(button => {
   });
 }); 
 
-scene2_C_C_Buttons.forEach(button => {
-    button.addEventListener('click', () => {
-    choice = button.id;
-    scene = 4;
-
-    console.log('Hello')
-    // Hide all buttons
-    scene2_C_C_Buttons.forEach(btn => btn.style.display = 'none');
-  });
-});
 // END OF CHINESE FOOD
 
 /////// /////// /////// /////// /////// /////// /////// 
@@ -160,14 +150,14 @@ scene2_M_B_Buttons.forEach(button => {
   });
 }); 
 
-scene2_C_C_Buttons.forEach(button => {
+scene2_M_F_Buttons.forEach(button => {
     button.addEventListener('click', () => {
     mexicanChoice = button.id;
     scene = 3;
 
     console.log('Hello')
     // Hide all buttons
-    scene2_C_C_Buttons.forEach(btn => btn.style.display = 'none');
+    scene2_M_F_Buttons.forEach(btn => btn.style.display = 'none');
   });
 });
 

@@ -133,8 +133,8 @@ function draw() {
         }
     
     } else if (scene == 3) {
-        textSize(40);
         if (choice === "canto-chicken" || choice === "tofu") {
+            textSize(30);
             text('Fantastic choice!', width/2, height/2);
         } else if (choice === "butt") {
             textSize(30);
@@ -148,6 +148,12 @@ function draw() {
         }  else if (mexicanChoice === "run") {
             textSize(25)
             text('You run after that man and trip on a rock. \nYour taco gets stolen and you take quite a knock. \nYou just lost so much aura.', width/2, height/2);
+        }   else if (mexicanChoice === "shoo") {
+            textSize(30)
+            text('That seagull was a mother trying to feed its kids. \nYou just shooed a poor single mother away.\n How do you feel?', width/2, height/2);
+        }   else if (mexicanChoice === "split") {
+            textSize(30)
+            text('That seagull was a mother trying to feed its kid. \nNow she can go home early to look after her kids.', width/2, height/2);
         } 
     }
 }

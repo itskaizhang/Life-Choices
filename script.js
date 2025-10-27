@@ -50,6 +50,22 @@ function setup() {
   burritoButton.mousePressed(() => currentPage = "burritoPage");
   nachosButton.mousePressed(() => currentPage = "nachoPage");
 
+  butchickenButton = createButton('Sherkaan')
+  naanButton = createButton('House of Naan')
+  chaiButton = createButton('Hot Murga')
+
+  butchickenButton.position(windowWidth / 2 - 100, windowHeight / 2);
+  naanButton.position(windowWidth / 2, windowHeight / 2);
+  chaiButton.position(windowWidth / 2 + 100, windowHeight / 2);
+
+  butchickenButton.hide();
+  naanButton.hide();
+  chaiButton.hide();
+
+  butchickenButton.mousePressed(() => currentPage = "butchickenPage");
+  naanButton.mousePressed(() => currentPage = "naanPage");
+  chaiButton.mousePressed(() => currentPage = "chaiPage");
+
 }
 
 

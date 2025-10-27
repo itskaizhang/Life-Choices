@@ -16,7 +16,7 @@ body {
 
 .regular-text {
     font-family: "Montagu Slab", serif;
-    font-size: 2em;
+    font-size: 1em;
     color: #ededed;
     font-weight: 400;
     text-align: center;
@@ -26,9 +26,13 @@ body {
 }
 
 #lunch-question {
-    border: 3px dotted #ededed;
+    border: 3px solid #ededed;
     font-size: 1.75em;
     padding: 5%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .lunch-choices {
@@ -36,9 +40,16 @@ body {
     justify-content: center;
     text-align: center;
     flex: 3;
-    gap: 10%;
+    gap: 20%;
+    margin-top: 3%;
 }
 
 button {
     padding: 1.25%;
+}
+
+#canvas-container {
+    width: 90%;    /* or any fixed width like 400px */
+    height: 500px;  /* adjust to your desired canvas height */
+    margin-bottom: 10px;
 }

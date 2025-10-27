@@ -12,8 +12,10 @@
 <body>
     <div>
         <p class="title">Life is full of difficult choices...</p>
-        <p class="title" style="font-size: 1.8em; margin-top: -3%">By Kai Zhang & Melik Williams</p>
     </div>
+
+    <p class="title" style="font-size: 1.5em; margin-top: -3%">By Kai Zhang & Melik Williams</p>
+
 <!--     
     <div>
         <p class="regular-text">
@@ -62,23 +64,26 @@
 
 
     <div class="title" id="lunch-question">
-        So, what do you want for lunch?
+        <div>So, what do you want for lunch?</div>
+        <br>
+        <div id="canvas-container"></div>
+
+        <div class="lunch-choices">
+            <button id="chinese" class="regular-text" style="color: #262b7c">🥡 Chinese</button>
+            <button id="mexican" class="regular-text" style="color: #262b7c">🌮 Mexican</button>
+            <button id="indian" class="regular-text" style="color: #262b7c">🍛 Indian</button>
+        </div>
+    
     </div>
 
-
-    <div class="lunch-choices">
-        <button class="regular-text" style="color: #262b7c">🥡 Chinese</button>
-        <button class="regular-text" style="color: #262b7c">🌮 Mexican</button>
-        <button class="regular-text" style="color: #262b7c">🍛 Indian</button>
-    </div>
 
     <div style="margin-top: 100px;"></div>
 
     <!-- Link to p5.js library -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
    
-    <!-- Link to specific p5.js file -->
-    <!-- <script src="script.js"></script> -->
+    <!-- Link to specific p5.js sketch file -->
+    <script src="sketch-2.js"></script>
 </body>
 </html>
 

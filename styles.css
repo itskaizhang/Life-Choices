@@ -1,0 +1,44 @@
+body {
+    background-color: #262b7c;
+}
+
+.title {
+    font-family: "Montagu Slab", serif;
+    font-size: 8em;
+    line-height: 95%;
+    color: #ededed;
+    text-align: center;
+    margin: 8%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.regular-text {
+    font-family: "Montagu Slab", serif;
+    font-size: 2em;
+    color: #ededed;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#lunch-question {
+    border: 3px dotted #ededed;
+    font-size: 1.75em;
+    padding: 5%;
+}
+
+.lunch-choices {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex: 3;
+    gap: 10%;
+}
+
+button {
+    padding: 1.25%;
+}

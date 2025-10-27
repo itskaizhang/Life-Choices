@@ -51,8 +51,11 @@ body {
 
 /* SCENE 1 */
 .scene1-C-choices,
+.scene1-M-choices,
 .scene2-C-J-choices,
-.scene2-C-C-choices {
+.scene2-C-C-choices,
+.scene2-M-B-choices,
+.scene2-M-F-choices {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -60,7 +63,11 @@ body {
 }
 
 .scene1-C-choices button:hover,
-.scene2-C-J-choices button:hover {
+.scene1-M-choices button:hover,
+.scene2-C-J-choices button:hover,
+.scene2-C-C-choices button:hover,
+.scene2-M-B-choices button:hover,
+.scene2-M-F-choices button:hover {
     background-color: #ea9d67;
 }
 

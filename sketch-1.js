@@ -1,10 +1,15 @@
 let currentPage = "start";
-let img;
 let button1, button2, button3;
+let img, imgMexican, imgRat, imgTomatillo, imgVivaz;
 
 function preload() {
   img = loadImage('https://images.medicinenet.com/images/article/main_image/man-hungry-angery-plate-utensils-eating-diet-nutrition.jpg');
+   imgMexican = loadImage('https://domesticfits.com/wp-content/uploads/2024/05/mexican-cuisine-more-than-640x427.jpeg');
+  imgRat = loadImage('https://nationalzoo.si.edu/sites/default/files/animals/norwayrat-001-reverse.jpg');
+  imgTomatillo = loadImage('https://s3-media0.fl.yelpcdn.com/bphoto/P2UmzAQe-uCw0Byoq0czYA/348s.jpg');
+  imgVivaz = loadImage('https://lh3.googleusercontent.com/p/AF1QipO9H_3UTU83GziD_WFVLfdm4y6YZzh054Hhildt=w289-h312-n-k-no');
 }
+
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -92,13 +97,13 @@ function showPage2() {
   button1.hide();
   button2.hide();
   button3.hide();
-
+ image(imgMexican, 0, 0, width, height / 2);
   tacoButton.show();
   burritoButton.show();
   nachosButton.show();
 
   background(255, 240, 200);
-  img = loadImage ('https://domesticfits.com/wp-content/uploads/2024/05/mexican-cuisine-more-than-640x427.jpeg');
+  
   fill(0);
   text("Where do you want to get Mexican food from?", width / 2, height / 2 - 100);
 }
@@ -130,7 +135,7 @@ function showFoodPage1(title, description) {
   button1.hide();
   button2.hide();
   button3.hide();
-  img = loadImage ('https://nationalzoo.si.edu/sites/default/files/animals/norwayrat-001-reverse.jpg')
+   image(imgRat, 0, 0, width, height / 2);
   background(250, 230, 180);
   fill(0);
   textSize(28);
@@ -146,8 +151,7 @@ function showFoodPage2(title, description) {
   button1.hide();
   button2.hide();
   button3.hide();
-  img = loadImage ('https://s3-media0.fl.yelpcdn.com/bphoto/P2UmzAQe-uCw0Byoq0czYA/348s.jpg')
-  background(250, 230, 180);
+   image(imgTomatillo, 0, 0, width, height / 2);
   fill(0);
   textSize(28);
   text(title, width / 2, height / 2 - 60);
@@ -161,7 +165,7 @@ function showFoodPage3(title, description) {
   button1.hide();
   button2.hide();
   button3.hide();
-  img = loadImage ('https://lh3.googleusercontent.com/p/AF1QipO9H_3UTU83GziD_WFVLfdm4y6YZzh054Hhildt=w289-h312-n-k-no')
+   image(imgVivaz, 0, 0, width, height / 2);
   background(250, 230, 180);
   fill(0);
   textSize(28);

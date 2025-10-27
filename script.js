@@ -91,6 +91,17 @@ scene2_C_J_Buttons.forEach(button => {
   });
 }); 
 
+scene2_C_C_Buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        choice = button.id;  // "butt" or "waiter"
+        scene = 3;
+        console.log('Chef Jiang choice:', choice);
+
+        // Hide all buttons in this scene
+        scene2_C_C_Buttons.forEach(btn => btn.style.display = 'none');
+    });
+});
+
 // END OF CHINESE FOOD
 
 /////// /////// /////// /////// /////// /////// /////// 

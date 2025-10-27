@@ -50,20 +50,19 @@ body {
 }
 
 /* SCENE 1 */
-.scene1-C-choices {
+.scene1-C-choices,
+.scene2-C-J-choices,
+.scene2-C-C-choices {
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
 }
 
-
-.scene1-C-choices button:hover {
+.scene1-C-choices button:hover,
+.scene2-C-J-choices button:hover {
     background-color: #ea9d67;
 }
-
-
-
 
 
 button {

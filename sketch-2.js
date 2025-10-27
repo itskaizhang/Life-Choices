@@ -1,33 +1,35 @@
-// let ellipseColor;
-// let currentImage;
-// let imgChinese, imgMexican, imgIndian;
+let scene = 0;
+let chinese = 0
+let mexican = 0;
+let sweetgreen = 0;
+let choice = "";
+let newFont;
 
-// function preload() {
-//   // preload your images (update these file paths as needed)
-//   imgChinese = loadImage('assets/Chinese-Food.jpg');
-//   imgMexican = loadImage('assets/Mexican-Food.jpg');
-//   imgIndian = loadImage('assets/Indian-Food.jpg');
-// }
+function preload() {
+    newFont = loadFont('assets/MontaguSlab_48pt-Regular.ttf')
+}
 
 function setup() {
     // Get the container size
     const container = document.getElementById('canvas-container');
-    // const canvas = createCanvas(container.offsetWidth, container.offsetHeight);
-    // canvas.parent('canvas-container'); // attach canvas to the div
+    const canvas = createCanvas(container.offsetWidth, container.offsetHeight);
+    canvas.parent('canvas-container'); // attach canvas to the div
   
-    // ellipseColor = color(255, 0, 0);
-    // background(100, 150, 200);
+    textFont(newFont);
+    textAlign(CENTER, CENTER);
+    textSize(40);
 
-    // const lunchButtons = document.querySelectorAll('.lunch-choices button');
+    // Event listeners -- Will learn more about this I'm sure
+    const lunchButtons = document.querySelectorAll('.lunch-choices button');
 
     // lunchButtons.forEach(button => {
     //     button.addEventListener('click', () => {
     //         if (button.id === 'chinese') {
-    //             currentImage = imgChinese;
-    //             // ellipseColor = color(255, 200, 0);
+    //             chinese = chinese + 1;
+    //             scene = 1;
     //         } else if (button.id === 'mexican') {
-    //             currentImage = imgMexican;
-    //             // ellipseColor = color(0, 255, 0);
+    //             mexican++;
+    //             scene = 1;
     //         } else if (button.id === 'indian') {
     //             currentImage = imgIndian;
     //             // ellipseColor = color(255, 100, 0);
@@ -35,17 +37,47 @@ function setup() {
     //     });
     // });
 
+    lunchButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            choice = button.id; // "chinese", "mexican", or "indian"
+            scene = 1;
+        });
+    });
 }
 
 function draw() {
-    // Attach button events
+    background('#4e529a');
+    fill('#ededed');
+    
     // const container = document.getElementById('canvas-container');
-    // document.getElementById('chinese').addEventListener('click', () => {
-    //     ellipseColor = color(255, 200, 0);
+    
+    // if (scene == 0) {
+    //     text('So, what do you want for lunch?', width/2, height/2);
+    // }
+    // // CHINESE FOOD
+    // else if (scene == 1 && chinese >= 1) {
+    //     text('Which Chinese restaurant do you want to go to?');
+    // }
+    // else if (scene == 1 && mexican >= 1) {
+    //     text("What kind of tacos are you getting?")
+    // }
 
-    // });
+    if (scene == 0) {
+        text('So, what do you want for lunch?', width/2, height/2);
+    } else if (scene == 1) {
+        if (choice === "chinese") {
+            textAlign(CENTER);
+            textSize(30);
+            text('Which Chinese restaurant do you want to go to?', width/2, height/2);
+        } else if (choice === "mexican") {
+            text('What kind of tacos are you getting?', width/2, height/2);
+        } else if (choice === "indian") {
+            text('When are you going to Sweetgreen?', width/2, height/2);
+        }
+    }
+}
 
-    // document.getElementById('mexican').addEventListener('click', () => {
+ // document.getElementById('mexican').addEventListener('click', () => {
     //     ellipseColor = color(0, 255, 0);
     // });
 
@@ -62,5 +94,3 @@ function draw() {
     //     fill(ellipseColor);
     //     ellipse(width / 2, height / 2, 80, 80);
     // }
-}
-  

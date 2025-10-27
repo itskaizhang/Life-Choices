@@ -34,30 +34,53 @@ body {
     align-items: center;
     white-space: nowrap;
     border-radius: 20px;
+    background-color: #4e529a;
 }
 
+/* SCENE 0 */
 .lunch-choices {
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    flex: 3; 
-    gap: 20%;
 }
 
-.lunch-choices button.active {
-    background-color: #ffcc66; /* highlight color */
-    border-color: #e6a400;
-    font-size: 4em;
-  }
+.lunch-choices button:hover {
+    background-color: #ea9d67;
+}
+
+/* SCENE 1 */
+.scene1-C-choices {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+.scene1-C-choices button:hover {
+    background-color: #ea9d67;
+}
+
+
+
+
 
 button {
     padding: 10px 30px;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
 }
 
-/* #canvas-container {
+#canvas-container {
     width: 90%;   
-    height: 500px; 
+    height: 200px; 
     margin-bottom: 10px;
-} */
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    z-index: 0; /* canvas is behind */
+    position: relative;
+}

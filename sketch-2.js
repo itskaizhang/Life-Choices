@@ -1,3 +1,6 @@
+// Description: 
+// The p5.js file that changes the canvas which only includes text
+
 let scene = 0;
 let choice = "";
 let mexicanChoice = "";
@@ -7,36 +10,6 @@ let newFont;
 function preload() {
     newFont = loadFont('assets/MontaguSlab_48pt-Regular.ttf')
 }
-
-// function setup() {
-//     // Get the container size
-//     const container = document.getElementById('canvas-container');
-//     const canvas = createCanvas(container.offsetWidth, container.offsetHeight);
-//     canvas.parent('canvas-container'); // attach canvas to the div
-  
-//     textFont(newFont);
-//     textAlign(CENTER, CENTER);
-//     textSize(40);
-
-//     // Event listeners -- Will learn more about this I'm sure
-//     const lunchButtons = document.querySelectorAll('.lunch-choices button');
-
-//     lunchButtons.forEach(button => {
-//         button.addEventListener('click', () => {
-//             choice = button.id; // "chinese", "mexican", or "indian"
-//             scene = 1;
-//         });
-//     });
-
-//     const scene1_C_Buttons = document.querySelectorAll('.scene1-C-choices button');
-
-//     scene1_C_Buttons.forEach(button => {
-//         button.addEventListener('click', () => {
-//             choice = button.id;
-//             scene = 2;
-//         });
-//     })
-// }
 
 function setup() {
     const container = document.getElementById('canvas-container');
@@ -94,19 +67,6 @@ function draw() {
     background('#4e529a');
     fill('#ededed');
     
-    // const container = document.getElementById('canvas-container');
-    
-    // if (scene == 0) {
-    //     text('So, what do you want for lunch?', width/2, height/2);
-    // }
-    // // CHINESE FOOD
-    // else if (scene == 1 && chinese >= 1) {
-    //     text('Which Chinese restaurant do you want to go to?');
-    // }
-    // else if (scene == 1 && mexican >= 1) {
-    //     text("What kind of tacos are you getting?")
-    // }
-
     if (scene == 0) {
         text('So, what do you want for lunch?', width/2, height/2);
     } else if (scene == 1) {
@@ -157,7 +117,6 @@ function draw() {
         } 
     }
 }
-
 
 
 // CODE SNIPPETS

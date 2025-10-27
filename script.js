@@ -1,8 +1,6 @@
-// // let scene = 0;
-// let chinese = 0
-// let mexican = 0;
-// let sweetgreen = 0;
-// let choice = "";
+// Description:
+// Controls the appearance of buttons and transitoning of scenes from one to another
+// Utilizes event listeners and document query selectors 
 
 const lunchButtons = document.querySelectorAll('.lunch-choices button');
 
